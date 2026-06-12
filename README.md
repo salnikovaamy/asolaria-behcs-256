@@ -47,6 +47,17 @@ asolaria-behcs-256/
 
 Every directory in `packages/` is an ES-module Node package with its own `package.json`. Nothing is TypeScript-required; most files are `.mjs`.
 
+## Tri-agent GitHub lane
+
+This repo now carries an explicit Codex/Oracle/Rose GitHub workflow:
+
+- `CODEX.md`, `ORACLE.md`, and `ROSE.md` stay thin Brown-Hilbert adapters
+- `agents/oracle-of-amy.profile.json`, `agents/codex-53.profile.json`, and `agents/rose.profile.json` pin the named-agent roles
+- `docs/github-tri-agent-workflow.md` defines the planner → builder → reviewer handoff
+- `.github/pull_request_template.md` and `.github/workflows/verify.yml` make the lane visible on GitHub
+
+The intended split is Oracle = `PLN/EXP`, Codex = `BLD`, Rose = `REV/CHAIR`, with the existing multi-agent gate still enforcing `>= 2` canonical agent signatures before merge.
+
 ## packages/ — 39 packages
 
 ### Supervisors (8)

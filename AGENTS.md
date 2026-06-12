@@ -13,7 +13,7 @@ This file is the compatibility surface for tools and agents that auto-load `AGEN
    - `projections/catalogs/minimax.public-catalog.v1.json`
    - `examples/minimax-m27/MiniMaxM27NamedWave.public.md`
    - `examples/minimax-m27/hg256-minimax-catalog-ingest.public.packet.json`
-5. Use `CODEX.md` or `CLAUDE.md` only as thin runtime adapters.
+5. Use `CODEX.md`, `CLAUDE.md`, `ORACLE.md`, or `ROSE.md` only as thin runtime adapters.
 
 ## Authority split
 

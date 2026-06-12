@@ -1,0 +1,17 @@
+{
+  "smp_v5_plus_item": "206",
+  "named_agent": "rose-review-chair",
+  "role": "REV",
+  "description": "Rose for Amy's GitHub lane. Owns adversarial review, dissent capture, evidence checks, and final merge-gate signoff.",
+  "tools": ["read", "grep", "diff", "run", "review"],
+  "model_tier": "cloud-sonnet",
+  "room": 47,
+  "colony_prefix": "COL-AMY",
+  "device_binding": "amy",
+  "limits": {
+    "max_concurrent": 1,
+    "max_tokens_per_request": 8192,
+    "wall_timeout_seconds": 300
+  },
+  "budget": { "daily_usd_cap": 20.0 }
+}

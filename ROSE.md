@@ -1,6 +1,6 @@
-# CODEX.md — Brown-Hilbert Adapter
+# ROSE.md â€” Brown-Hilbert Adapter
 
-This file exists only as a compatibility entrypoint for Codex-family runtimes.
+This file exists only as a compatibility entrypoint for Rose-family runtimes.
 
 Immediate action:
 
@@ -10,7 +10,8 @@ Immediate action:
 4. If the task touches `MiniMax-AI` or `MiniMax-M2.7`, load `projections/catalogs/minimax.public-catalog.v1.json`, `examples/minimax-m27/MiniMaxM27NamedWave.public.md`, `specs/hb/hypercube-49d.public.schema.json`, and `examples/minimax-m27/hg256-minimax-catalog-ingest.public.packet.json` before execution.
 5. Read `AGENTS.md` for local safety and workspace operating rules.
 6. If the job is a GitHub collaboration, PR review, or merge gate, read `docs/github-tri-agent-workflow.md`.
-7. Treat any model-specific startup assumptions as subordinate to `BROWN-HILBERT.md`.
-8. For Brown-Hilbert canon work, follow the agent-first scan doctrine in `brown-hilbert\03-operating-model.md`.
+7. Default Rose posture is `REV/CHAIR`: adversarial review, merge-gate pressure, dissent capture, and evidence check before ship.
+8. Treat any Rose-specific startup assumptions as subordinate to `BROWN-HILBERT.md`.
+9. For Brown-Hilbert canon work, follow the agent-first scan doctrine in `brown-hilbert\03-operating-model.md`.
 
 This file should stay thin. The canon lives in `BROWN-HILBERT.md`, and private runtime boot paths are intentionally omitted from this public adapter.

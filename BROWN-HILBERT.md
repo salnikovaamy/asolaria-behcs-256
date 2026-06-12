@@ -30,6 +30,8 @@ Load order:
    - `AGENTS.md`
    - `CLAUDE.md`
    - `CODEX.md`
+   - `ORACLE.md`
+   - `ROSE.md`
 
 If the job needs the current most advanced language or glyph semantics, load the public `49D` proposal map and HG256 atlas immediately after this file and before any deeper envelope.
 

@@ -2,9 +2,12 @@
 
 const { canTransition, transition, STATES } = require("../../src/agent/lifecycle.js");
 const { bindCheck } = require("../../src/agent/bind-check.js");
-const { logMistake } = require("../../src/agent/mistake-log.js");
 const path = require("node:path");
 const fs = require("node:fs");
+
+const tmpDir = path.join(__dirname, "..", "..", "tmp-test-mistakes");
+process.env.ASOLARIA_MISTAKES_DIR = tmpDir;
+const { logMistake } = require("../../src/agent/mistake-log.js");
 
 let pass = 0, fail = 0;
 function t(name, cond, d = "") { if (cond) { console.log("[PASS]", name, d); pass++; } else { console.log("[FAIL]", name, d); fail++; } }
@@ -30,10 +33,7 @@ function t(name, cond, d = "") { if (cond) { console.log("[PASS]", name, d); pas
 
 // mistake log — use temp dir so we don't pollute the real mistakes tree
 {
-  const tmpDir = path.join(__dirname, "..", "..", "tmp-test-mistakes");
-  process.env.ASOLARIA_MISTAKES_DIR = tmpDir;
-  const { logMistake: logFresh } = require("../../src/agent/mistake-log.js");
-  const r = logFresh({ named_agent: "test-agent-1", mistake_class: "bind-mismatch", summary: "unit test", context: { k: 1 }, chain: ["IX-001"] });
+  const r = logMistake({ named_agent: "test-agent-1", mistake_class: "bind-mismatch", summary: "unit test", context: { k: 1 }, chain: ["IX-001"] });
   t("mistake-log-writes-file", fs.existsSync(r.path));
   try { fs.rmSync(tmpDir, { recursive: true, force: true }); } catch {}
 }

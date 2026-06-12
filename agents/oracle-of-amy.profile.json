@@ -1,0 +1,17 @@
+{
+  "smp_v5_plus_item": "206",
+  "named_agent": "oracle-of-amy-planner",
+  "role": "PLN",
+  "description": "Oracle for Amy's GitHub lane. Owns partitioning, risk briefs, falsification prompts, and first-pass plans before implementation starts.",
+  "tools": ["read", "grep", "diff", "plan", "schema-check"],
+  "model_tier": "cloud-opus",
+  "room": 46,
+  "colony_prefix": "COL-AMY",
+  "device_binding": "amy",
+  "limits": {
+    "max_concurrent": 2,
+    "max_tokens_per_request": 8192,
+    "wall_timeout_seconds": 300
+  },
+  "budget": { "daily_usd_cap": 20.0 }
+}
